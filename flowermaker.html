@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> DIY Flowers </title>
+<h1> DIY Flowers - Make Your Own Bouquet</h1>
+<style>
+html, body {
+    height: 100%;
+    }
+ body {
+    height: 100dv;
+	background-image: url('flower_desktop_new.jpeg');
+    background repeat: no-repeat;
+	background-size: cover;
+    background-position: center-center;
+	}
+@media (max-width: 768px) { 
+   body { 
+    background repeat: no-repeat;
+	background-image: url('flower_bg_mobile.jpeg');
+    background-position: center-center;   
+	}
+	}
+h1 { 
+	color: black;
+	text-align: center;
+	margin-top: 35px;
+	left: 45%;
+	font-size: 35px;
+    font-family: 'Lucida Calligraphy', cursive;
+  }
+button {
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+#soundBtn {
+    position: absolute;
+	margin-top: 570px;
+	left: 2.5%;
+ 
+  }
+</style>
+</head>
+<body>
+
+<audio id="backgroundm">
+    <source src="birthdaysong1.mp3" type="audio/mpeg">
+</audio>
+<button id="soundBtn">🔊</button>
+
+<script>
+const backgroundm = document.getElementById('backgroundm');
+soundBtn.addEventListener('click', function(){ 
+if (backgroundm.paused){
+backgroundm.play();
+}
+else {
+background.pause();
+backgroundm.currentTime = 0;
+}
+});
+</script>
+
+</body>
+</html>

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Laurentius' Birthday Present to Zoé </title>
 <h1> for Zoé </h1>
-<h2> If you're seeing this, you opened it too early 😉. Update will follow.
- HI ZOEEEEEÉ </h2> 
+<!-- <h2> If you're seeing this, you opened it too early 😉. Update will follow. 
+ HI ZOEEEEEÉ </h2> -->
 <!--<h2> HI ZOEEEEEÉ </h2>-->
 <style>
 <!-- CSS-->
@@ -55,16 +55,25 @@ h2 {
 	left: 45%;
   }
 button {
-    position: absolute;
-	margin-top: 35%;
-	left: 40%;
+    
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px 60px;
-    font-size: 20px;
-    background-color: orange;
+    font-size: 20px; 
   }
+ #myButton1 {
+    position: absolute;
+	margin-top: 450px;
+	left: 40%;
+  background-color: orange;
+ }
+ #myButton2 {
+    position: absolute;
+	margin-top: 360px;
+	left: 10%;
+  background-color: lime;
+ }
 @media (max-width: 768px) { 
    button { 
     margin-top: 80%;
@@ -77,19 +86,30 @@ button {
     background-color: orange;   
 	}
 	}
+.image-overlay {
+    .overlay-content{
+    background-color: purple;
+    }
+	}
+.image-overlay.active {
+   .overlay-content{
+   background-color: none;
+	}
+	}
 .overlay-content {
-    position: relative;
-	margin-top: 20%;
+    position: absolute;
+	margin-top: 250px;
 	left: 45%;
     max-width: 10%;
     max-height: 10%;
-    background-color: white;
-    padding: 30px;
+    <1--background-color: white;-->
+    padding: 35px;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     }
-	@media (max-width: 768px) { 
+	
+ @media (max-width: 768px) { 
  .overlay-content { 
     margin-top: 50%;
 	left: 40%;
@@ -128,24 +148,32 @@ button {
         <div class="overlay-content">
         <button class="overlay-close-btn">&times;</button> <img src="bouquet.avif" </div>
     </div> -->
-
+<button id="myButton2">DIY Flowers!</button>
 <div id="imageOverlay" class="image-overlay">
     <div class="overlay-content">
     <img src="bouquet.jpg">
-    <p style="color: #333; margin-top: 10px;"></p>
-	
+    <p style="color: white; margin-top: 10px;"></p>	
 </div>
+
+
 <script>
     const myAudio = document.getElementById('myAudio');
     const imageOverlay = document.getElementById('imageOverlay');
+    const newPageOverlay = document.getElementById('newPageOverlay');
 myButton1.addEventListener('click', function(){ 
     
 	myButton1.innerText = "HAPPY 17th BIRTHDAY 🥳";
 	myAudio.currentTime = 0;
     myAudio.play();
 	imageOverlay.classList.toggle('active');
+	newPageOverlay.classList.remove('active');
 	
+
     });
+myButton2.addEventListener('click', function(){ 
+    window.open("flowermaker.html");
+
+});
 </script>
 </body>
 </html>
