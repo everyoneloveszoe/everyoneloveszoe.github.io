@@ -54,8 +54,8 @@ h2 {
   }
 button {
     position: absolute;
-	margin-top: 20%;
-	left: 44%;
+	margin-top: 35%;
+	left: 40%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -65,16 +65,47 @@ button {
   }
 @media (max-width: 768px) { 
    button { 
-    margin-top: 30%;
+    margin-top: 60%;
 	left: 20%;
 	align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px 60px;
+    padding: 15px 45px;
     font-size: 20px;
     background-color: orange;   
 	}
 	}
+.overlay-content {
+    position: relative;
+	margin-top: 20%;
+	left: 45%;
+    max-width: 10%;
+    max-height: 10%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    }
+	@media (max-width: 768px) { 
+   button { 
+    margin-top: 40%;
+	left: 20%;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px
+    font-size: 20px;
+    background-color: orange;   
+	}
+	}
+
+    .overlay-content img { 
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    }
 
 </style>
 <!-- HTML -->
@@ -90,14 +121,27 @@ button {
 </audio>
 
 <button id="myButton1">Klick mich!</button>
+ <!--<div id="bouquet" class="image-overlay">
+        <div class="overlay-content">
+        <button class="overlay-close-btn">&times;</button> <img src="bouquet.avif" </div>
+    </div> -->
 
+<div id="imageOverlay" class="image-overlay">
+    <div class="overlay-content">
+    <img src="bouquet.jpg">
+    <p style="color: #333; margin-top: 10px;"></p>
+	
+</div>
 <script>
     const myAudio = document.getElementById('myAudio');
+    const imageOverlay = document.getElementById('imageOverlay');
 myButton1.addEventListener('click', function(){ 
     
-	myButton1.innerText = "HAPPY BIRTHDAY 🥳";
+	myButton1.innerText = "HAPPY 17th BIRTHDAY 🥳";
 	myAudio.currentTime = 0;
     myAudio.play();
+	imageOverlay.classList.toggle('active');
+	
     });
 </script>
 </body>
