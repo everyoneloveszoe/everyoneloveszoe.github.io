@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Laurentius' Birthday Present to Zoé </title>
 <h1> for Zoé </h1>
-<h2> HI ZOEEEEEÉ </h2>
+<!--<h2> HI ZOEEEEEÉ </h2>-->
 <style>
 <!-- CSS-->
 
@@ -41,7 +41,7 @@
 h1 { 
 	color: purple;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 35px;
 	left: 45%;
 	font-size: 35px;
     font-family: 'Lucida Calligraphy', cursive;
@@ -54,8 +54,8 @@ h2 {
   }
 button {
     position: absolute;
-	margin-top: 10%;
-	left: 45%;
+	margin-top: 20%;
+	left: 44%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -74,13 +74,19 @@ button {
 </style>
 
 <body> 
+<audio id="myAudio">
+    <source src="birthdaysong1.mp3" type="audio/mpeg">
+</audio>
+
 <button id="myButton1">Klick mich!</button>
 
 <script>
+    const myAudio = document.getElementById('myAudio');
 myButton1.addEventListener('click', function(){ 
     
 	myButton1.innerText = "HAPPY BIRTHDAY 🥳";
-    
+	myAudio.currentTime = 0;
+    myAudio.play();
     });
 </script>
 </body>
