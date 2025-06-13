@@ -6,7 +6,7 @@
 <title> DIY Flowers </title>
 <h1> DIY Flowers - Make Your Own Bouquet</h1>
 <h2> Coming soon (i overestimated my abilities, :( sorry)</h2>
-<h3> <img src="whiteliliesbouquet_clean.png" alt="" class="mein-bild1"> </h3>
+<!-- <h3> <img src="whiteliliesbouquet_clean.png" alt="" class="mein-bild1"> </h3> -->
 <style>
 html, body {
     height: 100%;
@@ -40,16 +40,16 @@ h2 {
 	left: 45%;
 	
   }
-h3 {
+.flowers0 {
   
 	text-align: center;
 	margin-top: 20px;
 	left: 45%;
 	}
-   @media (max-width: 768px) { 
-  h3 { 
-  width: 200px;
-  height: 120px;
+@media (max-width: 768px) { 
+ .flowers0 { 
+  width: 100px;
+  height: 60px;
   left: 5%;
   }
   }
@@ -72,6 +72,11 @@ button {
 <audio id="backgroundm">
     <source src="birthdaysong1.mp3" type="audio/mpeg">
 </audio>
+
+<div id="flowers0" class="flowers0">
+    <div class="flowers">
+    <img src="whiteliliesbouquet_clean.png">
+</div>
 <button id="soundBtn">🔊</button>
 
 <script>
