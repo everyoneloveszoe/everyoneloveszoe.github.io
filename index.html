@@ -123,14 +123,14 @@ button {
    height: 100px;
    .overlay-content{
    width: 180px;
-   height: 190px
+   height: 100px
    background-color: none;
 	}
 	}
  .overlay-content { 
     position: absolute;
     margin-top: 200px;
-	left: 25%;
+	left: 30%;
     background-color: white;
 	align-items: center;
     justify-content: center;
@@ -173,6 +173,10 @@ button {
     <source src="birthdaysong1.mp3" type="audio/mpeg">
 </audio>
 
+<audio id="backgroundmusic">
+    <source src="flowers_cyrus.mp3" type="audio/mpeg">
+</audio>
+
 <button id="myButton1">Klick mich!</button>
  <!--<div id="bouquet" class="image-overlay">
         <div class="overlay-content">
@@ -188,13 +192,16 @@ button {
 
 <script>
     const myAudio = document.getElementById('myAudio');
+	const backgroundmusic = document.getElementById('backgroundmusic');
     const imageOverlay = document.getElementById('imageOverlay');
     const newPageOverlay = document.getElementById('newPageOverlay');
 myButton1.addEventListener('click', function(){ 
     
 	myButton1.innerText = "HAPPY 17th BIRTHDAY 🥳";
 	myAudio.currentTime = 0;
+	myAudio.volume = 1.0;
     myAudio.play();
+	backgroundmusic.pause();
 	imageOverlay.classList.toggle('active');
 	newPageOverlay.classList.remove('active');
 	
@@ -202,6 +209,9 @@ myButton1.addEventListener('click', function(){
     });
 myButton2.addEventListener('click', function(){ 
     window.open("flowermaker.html");
+    backgroundmusic.volume = 0.4;
+	backgroundmusic.play();
+	myAudio.pause();
 
 });
 </script>

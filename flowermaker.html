@@ -73,7 +73,7 @@ button {
 <body>
 
 <audio id="backgroundm">
-    <source src="birthdaysong1.mp3" type="audio/mpeg">
+    <source src="flowers_cyrus.mp3" type="audio/mpeg">
 </audio>
 
 <div id="flowers0" class="flowers0">
@@ -83,13 +83,19 @@ button {
 <button id="soundBtn">🔊</button>
 
 <script>
+let playmusic = 0;
 const backgroundm = document.getElementById('backgroundm');
-soundBtn.addEventListener('click', function(){ 
-if (backgroundm.paused){
+if (playmusic == 0){
 backgroundm.play();
 }
+soundBtn.addEventListener('click', function(){ 
+if (playmusic == 0){
+backgroundm.pause();
+playmusic = 1;
+}
 else {
-background.pause();
+backgroundm.play();
+playmusic = 0;
 backgroundm.currentTime = 0;
 }
 });
