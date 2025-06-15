@@ -71,24 +71,16 @@ button {
 	left: 40%;
   background-color: orange;
  }
+ #myButton1.centering {
+  transform: translateX(-2vw);
+ }
  #myButton2 {
     position: absolute;
 	margin-top: 360px;
 	left: 10%;
   background-color: lime;
  }
-@media (max-width: 768px) { 
-   button { 
-    margin-top: 80%;
-	left: 15%;
-	align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px 30px;
-    font-size: 18px;
-    background-color: orange;   
-	}
-	}
+
 .image-overlay {
     .overlay-content{
     background-color: none;
@@ -130,28 +122,37 @@ button {
    background-color: none;
 	}
 	}
- .overlay-content { 
+.overlay-content { 
     position: absolute;
     margin-top: 200px;
-	left: 35%;
+	left: 38%;
     background-color: white;
 	align-items: center;
     justify-content: center;
     text-align: center;
     padding: 90px
     font-size: 60px;
-    
 	}
+button { 
+    margin-top: 80%;
+	left: 15%;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: orange;   
+	}	
 #myButton1 {
     position: absolute;
 	margin-top: 350px;
-	left: 28%;
+	left: 30%;
   background-color: orange;
  }
 #myButton2 {
     position: absolute;
 	margin-top: 140px;
-	left: 28%;
+	left: 30%;
   background-color: lime;
  }
 	}
@@ -206,6 +207,7 @@ myButton1.addEventListener('click', function(){
     myAudio.play();
 	backgroundmusic.pause();
 	imageOverlay.classList.toggle('active');
+	this.classList.toggle('centering'); 
 	newPageOverlay.classList.remove('active');
 	
 
