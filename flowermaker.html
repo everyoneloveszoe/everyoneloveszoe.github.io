@@ -59,19 +59,49 @@ h2 {
     height:auto;
   }
   } -->
+
+
   
+.flowers img {
+    max-width: 200px;
+	max-height: 200px;
+	visibility: hidden;
+  }
+.angezeigt img {
+    max-width: 200px;
+	max-height: 200px;
+	visibility: visible;
+  }
+#hibiscus1 {
+    position: relative;
+    margin-top: 100px;
+	left: 43%;
+	padding: 1px;
+	object-fit: cover;
+  } 
+
 button { 
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    font-size: 18px;
+    background-color: white; 
+
+  }
+#anzeigeBtn {
+    position: absolute;
+	margin-top: 50px;
+	left: 0%;
+	width: 200px;
+	height: 150px;
   }
 #soundBtn {
     position: relative;
-	margin-top: 36%;
-	left: 2%;
+	margin-top: 18%;
+	left: -42%;
 	width: 70px;
 	height: 50px;
+	
   }
+
 @media (max-width: 768px) { 
  h1 {
     color: black;
@@ -101,11 +131,21 @@ button {
     <div class="flowers">
     <img src="whiteliliesbouquet_clean.png">
 </div> -->
+
+<div id="hibiscus1" class="Flowers">
+    <div class="flowers">
+    <img src="hibiscus1_clean.png">
+</div>
+
 <button id="soundBtn" class="sounds">🔇</button>
+
+<button id="anzeigeBtn" class="anzeige">test beta</button>
 
 <script>
 let playmusic = 1;
+let anzeigestatus = 1
 const backgroundm = document.getElementById('backgroundm');
+const hibiscus1 = document.getElementById('hibiscus1');
 if (playmusic == 1){
 backgroundm.play();
 }
@@ -121,6 +161,10 @@ soundBtn.innerText = "🔊";
 playmusic = 0;
 <!-- backgroundm.currentTime = 0; -->
 }
+});
+anzeigeBtn.addEventListener('click', function(){ 
+hibiscus1.classList.add('angezeigt');
+
 });
 </script>
 
