@@ -22,7 +22,7 @@ body {
     background-position: center-center;
 	}
 @media (max-width: 768px) { 
-   body { 
+ body { 
     background repeat: no-repeat;
 	background-image: url('flower_bg_mobile.jpeg');
     background-position: center-center;   
@@ -84,7 +84,6 @@ button {
     text-align: center;
     font-size: 18px;
     background-color: white; 
-
   }
 #anzeigeBtn {
     position: absolute;
@@ -106,14 +105,35 @@ button {
  h1 {
     color: black;
 	text-align: center;
-	margin-top: 6px;
+	margin-top: 5px;
 	left: 40%;
 	font-size: 26px;
     font-family: 'Lucida Calligraphy', cursive;
   }
+ .flowers img {
+    max-width: 100px;
+	max-height: 100px;
+	visibility: hidden;
+  }
+ .angezeigt img {
+    max-width: 100px;
+	max-height: 100px;
+	visibility: visible;
+  }
+ button { 
+    text-align: center;
+    font-size: 16px;
+    background-color: white; 
+  }
+ #anzeigeBtn {
+    position: absolute;
+	margin-top: 50px;
+	left: 0%;
+	width: 160px;
+	height: 120px;
  #soundBtn {
     position: relative;
-	margin-top: 150%;
+	margin-top: 30%;
 	left: 3%;
 	width: 45px;
 	height: 30px;
