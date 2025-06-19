@@ -144,8 +144,12 @@ button {
 </head>
 <body>
 
-<audio id="backgroundm">
-    <source src="flowers_cyrus.mp3" type="audio/mpeg" autoplay loop>
+<audio id="song1">
+    <source src="flowers_cyrus.mp3" type="audio/mpeg" autoplay>
+</audio>
+
+<audio id="song2">
+    <source src="itwillrain_mars.mp3" type="audio/mpeg">
 </audio>
 
 <!-- <div id="flowers0" class="Flowers0">
@@ -170,24 +174,33 @@ button {
 <script>
 let playmusic = 1;
 let anzeigestatus = 1
-const backgroundm = document.getElementById('backgroundm');
+const song1 = document.getElementById('song1');
+const song2 = document.getElementById('song2');
 const hibiscus1 = document.getElementById('hibiscus1');
 if (playmusic == 1){
-backgroundm.play();
+song1.volume = 0.7;
+song1.play();
+
 }
 soundBtn.addEventListener('click', function(){ 
 if (playmusic == 0){
-backgroundm.pause();
+song1.pause();
 soundBtn.innerText = "🔇";
 playmusic = 1;
 }
 else {
-backgroundm.play();
+song1.volume = 0.7;
+song1.play();
 soundBtn.innerText = "🔊";
 playmusic = 0;
-<!-- backgroundm.currentTime = 0; -->
+ song1.addEventListener('ended', function() {
+ song2.volume = 1.0;
+ song2.play();
+ });
+<!-- song1.currentTime = 0; -->
 }
 });
+
 anzeigeBtn.addEventListener('click', function(){ 
 hibiscus1.classList.add('angezeigt');
 
