@@ -129,8 +129,8 @@ button {
     position: absolute;
 	margin-top: 50px;
 	left: -25%;
-	width: 144px;
-	height: 108px;
+	width: 112px;
+	height: 84px;
   }
  #soundBtn {
     position: relative;
@@ -144,11 +144,11 @@ button {
 </head>
 <body>
 
-<audio id="song1">
+<audio id="song1" class="songs">
     <source src="flowers_cyrus.mp3" type="audio/mpeg" autoplay>
 </audio>
 
-<audio id="song2">
+<audio id="song2" class="songs">
     <source src="itwillrain_mars.mp3" type="audio/mpeg">
 </audio>
 
@@ -167,7 +167,7 @@ button {
     <img src="tulip1_clean.png">
 </div> -->
  
-<button id="soundBtn" class="sounds">🔇</button>
+<button id="soundBtn" class="soundButton">🔇</button>
 
 <button id="anzeigeBtn" class="anzeige">flower1 (more coming soon)</button>
 
@@ -185,6 +185,7 @@ song1.play();
 soundBtn.addEventListener('click', function(){ 
 if (playmusic == 0){
 song1.pause();
+song2.pause();
 soundBtn.innerText = "🔇";
 playmusic = 1;
 }
