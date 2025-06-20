@@ -62,7 +62,7 @@ h2 {
 
 
   
-.flowers img {
+.Flower1 img {
     max-width: 200px;
 	max-height: 200px;
 	visibility: hidden;
@@ -110,7 +110,7 @@ button {
 	font-size: 25px;
     font-family: 'Lucida Calligraphy', cursive;
   }
- .flowers img {
+ .Flower1 img {
     max-width: 100px;
 	max-height: 100px;
 	visibility: hidden;
@@ -173,6 +173,7 @@ button {
 
 <script>
 let playmusic = 1;
+let songno = 1;
 let anzeigestatus = 1
 const song1 = document.getElementById('song1');
 const song2 = document.getElementById('song2');
@@ -183,23 +184,38 @@ song1.play();
 
 }
 soundBtn.addEventListener('click', function(){ 
+song1.addEventListener('ended', function() {
+ songno = 2;
+ song1.pause();
+ song2.volume = 1.0;
+ song2.play();
+ });
+  song2.addEventListener('ended', function() {
+  songno = 1;
+  song2.pause();
+  song1.volume = 0.7;
+  song1.play();
+ });
+ 
 if (playmusic == 0){
 song1.pause();
 song2.pause();
 soundBtn.innerText = "🔇";
 playmusic = 1;
 }
-else {
+else if (playmusic == 1 && songno == 1) {
 song1.volume = 0.7;
 song1.play();
 soundBtn.innerText = "🔊";
 playmusic = 0;
- song1.addEventListener('ended', function() {
- song2.volume = 1.0;
- song2.play();
- });
-<!-- song1.currentTime = 0; -->
 }
+else if (playmusic == 1 && songno == 2) {
+song2.volume = 1.0;
+song2.play();
+soundBtn.innerText = "🔊";
+playmusic = 0;
+}
+<!-- song1.currentTime = 0; -->
 });
 
 anzeigeBtn.addEventListener('click', function(){ 
