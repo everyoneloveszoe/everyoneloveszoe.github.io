@@ -64,16 +64,6 @@ h2 {
 
 
   
-.Flower1 img {
-    max-width: 200px;
-	max-height: 200px;
-	visibility: hidden;
-  }
-#hibiscus1.angezeigt img {
-    max-width: 200px;
-	max-height: 200px;
-	visibility: visible;
-  }
 <!-- #hibiscus1 {
     position: absolute;
     margin-top: 100px;
@@ -89,20 +79,45 @@ button {
   }
 #anzeigeBtn {
     position: absolute;
-	margin-top: 40px;
-	left: -250px;
+	margin-top: 150px;
+	left: 150px;
 	width: 200px;
 	height: 150px;
+	
   }
 #soundBtn {
     position: fixed;
-	margin-top: 260px;
+	margin-top: 400px;
 	left: 20px;
 	width: 70px;
 	height: 50px;
-	
+	z-index: 1000;
   }
 
+
+.Flower1 img {
+    max-width: 200px;
+	max-height: 200px;
+	visibility: hidden;
+  }
+#hibiscus1.angezeigt img {
+    max-width: 200px;
+	max-height: 200px;
+	visibility: visible;
+  }
+  
+.Flower2 img {
+    max-width: 200px;
+	max-height: 200px;
+	visibility: hidden;
+  }
+#tulip1.angezeigt img {
+    max-width: 200px;
+    max-height: 200px;
+    visibility: visible;
+  }
+  
+  
 @media (max-width: 768px) { 
  h1 {
     color: black;
@@ -136,7 +151,7 @@ button {
   }
  #soundBtn {
     position: fixed;  
-	margin-top: 265px;
+	margin-top: 295px;
 	left: 5px;
 	width: 45px;
 	height: 32px;
@@ -157,17 +172,20 @@ button {
 <!-- <div id="flowers0" class="Flowers0">
     <div class="flowers">
     <img src="whiteliliesbouquet_clean.png">
+</div>
 </div> -->
 
 <div id="hibiscus1" class="Flower1">
     <div class="flowers">
     <img src="hibiscus1_clean.png">
 </div>
+</div> <!-- why did i forget this second div close thingy and didn't realize lol -->
 
-<!-- <div id="tulip1" class="Flower2">
+<div id="tulip1" class="Flower2">
     <div class="flowers">
     <img src="tulip1_clean.png">
-</div> -->
+</div> 
+</div>
  
 <button id="soundBtn" class="soundButton">🔇</button>
 
