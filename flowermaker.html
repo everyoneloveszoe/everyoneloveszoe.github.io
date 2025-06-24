@@ -89,18 +89,31 @@ button {
     background-color: white; 
   }
 #anzeigeBtn1 {
-    position: fixed;
-	margin-top: 21%;
+    font-family: 'Georgia', 'Times New Roman', serif;
+	text-align: center;
+	position: fixed;
+	margin-top: 27%;
 	left: 10%;
-	width: 200px;
-	height: 150px;
+	width: 120px;
+	height: 80px;
   }
 #anzeigeBtn2 {
-    position: fixed;
-	margin-top: 21%;
-	left: 25%;
-	width: 200px;
-	height: 150px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+	text-align: center;
+	position: fixed;
+	margin-top: 27%;
+	left: 21%;
+	width: 120px;
+	height: 80px;
+  }
+#anzeigeBtn3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+	text-align: center;
+	position: fixed;
+	margin-top: 27%;
+	left: 32%;
+	width: 120px;
+	height: 80px;
   }
 #soundBtn {
     position: fixed;
@@ -114,35 +127,51 @@ button {
 #hibiscus1 {
     position: absolute;
 	margin-top: 90px;
-	left: 40%;
-	z-index: 1;
+	left: 29%;
+	z-index: 100;
   }
-	
 .Flower1 img {
-    max-width: 200px;
-	max-height: 200px;
+    max-width: 180px;
+	max-height: 180px;
 	visibility: hidden;
   }
 #hibiscus1.angezeigt img {
-    max-width: 200px;
-	max-height: 200px;
+    max-width: 180px;
+	max-height: 180px;
 	visibility: visible;
   }
   
 #tulip1 {
     position: absolute;
 	margin-top: 100px;
-	left: 52%;
-	z-index: -1;
+	left: 42%;
+	z-index: 50;
   } 
 .Flower2 img {
-    max-width: 200px;
-	max-height: 200px;
+    max-width: 180px;
+	max-height: 180px;
 	visibility: hidden;
   }
 #tulip1.angezeigt img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 180px;
+    max-height: 180px;
+    visibility: visible;
+  }
+  
+#peony1 {
+    position: absolute;
+	margin-top: 100px;
+	left: 55%;
+	z-index: 30;
+  } 
+.Flower3 img {
+    max-width: 180px;
+	max-height: 180px;
+	visibility: hidden;
+  }
+#peony1.angezeigt img {
+    max-width: 180px;
+    max-height: 180px;
     visibility: visible;
   }
   
@@ -153,7 +182,7 @@ button {
 	text-align: center;
 	top: 0.1%;
 	left: 40%;
-	font-size: 156.25%;
+	font-size: 156%;
     font-family: 'Lucida Calligraphy', cursive;
   }
   
@@ -163,19 +192,29 @@ button {
     background-color: white; 
   }
  #anzeigeBtn1 {
-    position: fixed;
+    font-family: 'Georgia', 'Times New Roman', serif;
+	text-align: center;
+	position: fixed;
 	margin-top: 98%;
 	left: 24%;
-	width: 112px;
-	height: 84px;
+	width: 75px;
+	height: 50px;
   }
  #anzeigeBtn2 {
     position: fixed;
 	margin-top: 98%;
-	left: 52%;
-	width: 112px;
-	height: 84px;
+	left: 43%;
+	width: 75px;
+	height: 50px;
   }
+  #anzeigeBtn3 {
+    position: fixed;
+	margin-top: 98%;
+	left: 62%;
+	width: 75px;
+	height: 50px;
+  }
+  
  #soundBtn {
     position: fixed;  
     bottom: 20px;
@@ -188,12 +227,12 @@ button {
  #hibiscus1 {
     position: absolute;
 	margin-top: 120px;
-	left: 30%;
+	left: 22%;
 	z-index: 1;
   } 
  .Flower1 img {
-    max-width: 100px;
-	max-height: 100px;
+    max-width: 80px;
+	max-height: 80px;
 	visibility: hidden;
   }
  #hibiscus1.angezeigt img {
@@ -205,15 +244,32 @@ button {
  #tulip1 {
     position: absolute;
 	margin-top: 130px;
-	left: 52%;
-	z-index: -1;
+	left: 45%;
+	z-index: 0;
   } 
-.Flower2 img {
+ .Flower2 img {
     max-width: 100px;
 	max-height: 100px;
 	visibility: hidden;
   }
-#tulip1.angezeigt img {
+ #tulip1.angezeigt img {
+    max-width: 100px;
+    max-height: 100px;
+    visibility: visible;
+  }
+  
+ #peony1 {
+    position: absolute;
+	margin-top: 100px;
+	left: 68%;
+	z-index: -1;
+  } 
+ .Flower3 img {
+    max-width: 100px;
+	max-height: 100px;
+	visibility: hidden;
+  }
+ #peony1.angezeigt img {
     max-width: 100px;
     max-height: 100px;
     visibility: visible;
@@ -248,12 +304,21 @@ button {
     <img src="tulip1_clean.png">
 </div> 
 </div>
+
+<div id="peony1" class="Flower3">
+    <div class="flowers">
+    <img src="peony1_clean.png">
+</div> 
+</div>
+
  
 <button id="soundBtn" class="soundButton">🔇</button>
 
-<button id="anzeigeBtn1" class="anzeige">flower1 (more coming soon)</button>
+<button id="anzeigeBtn1" class="anzeige"> hibiscus </button>
 
-<button id="anzeigeBtn2" class="anzeige">flower2 (more coming soon)</button>
+<button id="anzeigeBtn2" class="anzeige"> tulip </button>
+
+<button id="anzeigeBtn3" class="anzeige"> peony </button>
 
 <script>
 let playmusic = 1;
@@ -305,6 +370,11 @@ hibiscus1.classList.add('angezeigt');
 
 anzeigeBtn2.addEventListener('click', function(){ 
 tulip1.classList.add('angezeigt');
+
+});
+
+anzeigeBtn3.addEventListener('click', function(){ 
+peony1.classList.add('angezeigt');
 
 });
 </script>
