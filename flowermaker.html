@@ -92,7 +92,7 @@ button {
     font-family: 'Georgia', 'Times New Roman', serif;
 	text-align: center;
 	position: fixed;
-	margin-top: 27%;
+	margin-top: 26.8%;
 	left: 10%;
 	width: 120px;
 	height: 80px;
@@ -101,7 +101,7 @@ button {
     font-family: 'Georgia', 'Times New Roman', serif;
 	text-align: center;
 	position: fixed;
-	margin-top: 27%;
+	margin-top: 26.8%;
 	left: 21%;
 	width: 120px;
 	height: 80px;
@@ -110,11 +110,21 @@ button {
     font-family: 'Georgia', 'Times New Roman', serif;
 	text-align: center;
 	position: fixed;
-	margin-top: 27%;
+	margin-top: 26.8%;
 	left: 32%;
 	width: 120px;
 	height: 80px;
   }
+#anzeigeBtn4 {
+    font-family: 'Gerogia', Times New Roman', serif;
+	text.align: center;
+	position: fixed;
+	margin-top: 26.8%;
+	left: 43%;
+	width: 120px;
+	height: 80px;
+  }
+	
 #soundBtn {
     position: fixed;
 	bottom: 25px;
@@ -127,7 +137,7 @@ button {
 #hibiscus1 {
     position: absolute;
 	margin-top: 90px;
-	left: 29%;
+	left: 26%;
 	z-index: 100;
   }
 .Flower1 img {
@@ -144,7 +154,7 @@ button {
 #tulip1 {
     position: absolute;
 	margin-top: 100px;
-	left: 42%;
+	left: 39%;
 	z-index: 50;
   } 
 .Flower2 img {
@@ -161,7 +171,7 @@ button {
 #peony1 {
     position: absolute;
 	margin-top: 100px;
-	left: 55%;
+	left: 52%;
 	z-index: 30;
   } 
 .Flower3 img {
@@ -175,6 +185,22 @@ button {
     visibility: visible;
   }
   
+#dahlia1 {
+    position: absolute;
+	margin-top: 90px;
+	left: 67%;
+	z-index: 20;
+  } 
+.Flower4 img {
+    max-width: 172px;
+	max-height: 172px;
+	visibility: hidden;
+  }
+#dahlia1.angezeigt img {
+    max-width: 172px;
+    max-height: 172px;
+    visibility: visible;
+  }
   
 @media (max-width: 768px) {    <!-- a comment so that it highlights in green cuz i'm kinda blind -->
  h1 {
@@ -195,30 +221,38 @@ button {
     font-family: 'Georgia', 'Times New Roman', serif;
 	text-align: center;
 	position: fixed;
-	margin-top: 98%;
-	left: 23%;
-	width: 79px;
+	margin-top: 90%;
+	left: 30%;
+	width: 82px;
 	height: 50px;
   }
  #anzeigeBtn2 {
     position: fixed;
-	margin-top: 98%;
-	left: 43%;
-	width: 75px;
+	margin-top: 90%;
+	left: 56%;
+	width: 82px;
 	height: 50px;
   }
-  #anzeigeBtn3 {
+ #anzeigeBtn3 {
     position: fixed;
-	margin-top: 98%;
-	left: 62%;
-	width: 75px;
+	margin-top: 110%;
+	left: 30%;
+	width: 82px;
+	height: 50px;
+  }
+  
+ #anzeigeBtn4 {
+    position: fixed;
+	margin-top: 110%;
+	left: 56%;
+	width: 82px;
 	height: 50px;
   }
   
  #soundBtn {
     position: fixed;  
     bottom: 20px;
-	left: 8px;
+	left: 9px;
 	width: 45px;
 	height: 32px;
 	z-index: 1000;
@@ -226,9 +260,9 @@ button {
  
  #hibiscus1 {
     position: absolute;
-	margin-top: 120px;
-	left: 21%;
-	z-index: 1;
+	margin-top: 40%;
+	left: 32%;
+	z-index: 3;
   } 
  .Flower1 img {
     max-width: 80px;
@@ -243,26 +277,26 @@ button {
  
  #tulip1 {
     position: absolute;
-	margin-top: 130px;
-	left: 43%;
-	z-index: 0;
+	margin-top: 40%;
+	left: 54%;
+	z-index: 2;
   } 
  .Flower2 img {
-    max-width: 80px;
-	max-height: 80px;
+    max-width: 82px;
+	max-height: 82px;
 	visibility: hidden;
   }
  #tulip1.angezeigt img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 82px;
+    max-height: 82px;
     visibility: visible;
   }
   
  #peony1 {
     position: absolute;
-	margin-top: 120px;
-	left: 65%;
-	z-index: -1;
+	margin-top: 65%;
+	left: 32%;
+	z-index: 1;
   } 
  .Flower3 img {
     max-width: 80px;
@@ -272,6 +306,23 @@ button {
  #peony1.angezeigt img {
     max-width: 80px;
     max-height: 80px;
+    visibility: visible;
+  }
+  
+ #dahlia1 {
+    position: absolute;
+	margin-top: 65%;
+	left: 54%;
+	z-index: -1;
+  } 
+ .Flower4 img {
+    max-width: 76px;
+	max-height: 76px;
+	visibility: hidden;
+  }
+ #dahlia1.angezeigt img {
+    max-width: 76px;
+    max-height: 76px;
     visibility: visible;
   }
   }
@@ -311,7 +362,12 @@ button {
 </div> 
 </div>
 
- 
+<div id="dahlia1" class="Flower4">
+    <div class="flowers">
+	<img src="dahlia1_improved_clean.png">
+</div>
+</div>
+
 <button id="soundBtn" class="soundButton">🔇</button>
 
 <button id="anzeigeBtn1" class="anzeige"> hibiscus </button>
@@ -319,6 +375,8 @@ button {
 <button id="anzeigeBtn2" class="anzeige"> tulip </button>
 
 <button id="anzeigeBtn3" class="anzeige"> peony </button>
+
+<button id="anzeigeBtn4" class="anzeige"> dahlia </button>
 
 <script>
 let playmusic = 1;
@@ -375,6 +433,11 @@ tulip1.classList.add('angezeigt');
 
 anzeigeBtn3.addEventListener('click', function(){ 
 peony1.classList.add('angezeigt');
+
+});
+
+anzeigeBtn4.addEventListener('click', function(){
+dahlia1.classList.add('angezeigt');
 
 });
 </script>
