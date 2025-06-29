@@ -67,44 +67,60 @@ button {
     text-align: center;
     padding: 20px 60px;
     font-size: 20px; 
- }
+  }
  
 #myButton1 {
+    text-align: center;
+	position: fixed;
+	width: 220px;
+	height: 69px;
     border-radius: 2px;
-    position: absolute;
 	margin-top: 450px;
-	left: 40%;
+	left: 41%;
     background-color: orange;
 	filter: brightness(103%);	
- }
+  }
 #myButton1.centering {
-  border-radius: 8px;
-  transform: translateX(-2vw);
-  filter: brightness(106%);
+    text-align: center;
+	position: fixed;
+	width: 350px;
+	height: 85px;
+    border-radius: 8px;
+	margin-top: 450px;
+    transform: translateX(-1.5vw);
+    filter: brightness(106%);
  
- }
+  }
 #myButton1.colorBrightness {
-  filter: brightness(94%);
- }
+    text-align: center;
+    position: fixed;
+    width: 350px;
+    height: 85px;
+	margin-top: 447px;
+    filter: brightness(94%);
+  }
  
 #myButton2 {
-    border-radius: 18px;
-    position: absolute;
+    text-align: center;
+	position: fixed;
+	width: 240px;
+	height: 65px;
+	border-radius: 18px;
 	margin-top: 360px;
 	left: 10%;
     background-color: lime;
- }
+  }
 
 .flowerBouquet {
     .mainImage {
      background-color: white;
-    }
-	}
+   }
+  }
 .flowerBouquet.active {
     .mainImage{
      background-color: none;
-	}
-	}
+   }
+  }
 .mainImage {
 	position: absolute;
 	margin-top: 250px;
@@ -117,14 +133,14 @@ button {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
 	border-radius: 80%;
-    }
+  }
 .mainImage img {   <!-- took me too long to figure out that the image tag ensures the scaling of the image -->
 	max-width: 150px;
     max-height: 150px;
     display: block;
     margin: 0 auto;
 	border-radius: 20%;
-    }
+  }
 	
 @media (max-width: 768px) {    <!-- code for phone version below -->
  button { 
@@ -136,26 +152,45 @@ button {
     padding: 10px 30px;
     font-size: 18px;
     background-color: orange;   
-	}	
+  }	
  #myButton1 {
-    position: absolute;
+    text-align: center;
+	position: fixed;
+	width: 148px;
+	height: 46px;
+    border-radius: 2px;
 	margin-top: 350px;
 	left: 29%;
     background-color: orange;
 	color: brightness(103%);
-    }
+  }
  #myButton1.centering2 {
+    text-align: center;
+	position: fixed;
+	width: 235px;
+	height: 57px;
+    border-radius: 8px;
+	margin-top: 350px;
     transform: translateX(-15vw);
     filter: brightness(106%);
-    border-radius: 8px;
   }
  #myButton1.colorBrightness {
-    transform: translateX(-11vw);
+	text-align: center;
+    position: fixed;
+    width: 235px;
+    height: 57px;
+	margin-top: 348px;
+	transform: translateX(-11vw);
     filter: brightness(94%);
  }
  
  #myButton2 {
-    position: absolute;
+   
+    text-align: center;
+	position: fixed;
+	width: 162px;
+	height: 44px;
+	border-radius: 18px;
 	margin-top: 140px;
 	left: 28.5%;
     background-color: lime;
@@ -166,32 +201,32 @@ button {
    height: 100px;
     .mainImage {
      background-color: white;
-    }
-	}
+   }
+  }
  .flowerBouquet.active {
    width: 180px;
    height: 100px;
     .mainImage {
      background-color: none;
-	}
-	}
+   }
+  }
  .mainImage { 
     position: absolute;
-    margin-top: 205px;
+    margin-top: 215px;
 	left: 36%;
 	align-items: center;
     justify-content: center;
     text-align: center;
     padding: 90px
     font-size: 60px;
-	} 
+  } 
  .mainImage img {   <!-- took me too long to figure out that the image tag ensures the scaling of the image -->
     max-width: 110px;
     max-height: 110px;
     display: block;
     margin: 0 auto;
-    }
-	}
+  }
+  }
 </style>
 </head>
 <!-- HTML -->
