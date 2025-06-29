@@ -11,7 +11,7 @@
  HI ZOEEEEEÉ </h2> -->
 <!--<h2> HI ZOEEEEEÉ </h2>-->
 <style>
-<!-- CSS-->
+<!-- CSS -->
 
 <!--body {
     background-image: url('testnevergonna.jpg');
@@ -25,13 +25,14 @@
     justify-content: center;
 	
   }-->
- html, body {
+  
+html, body {
     height: 100%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
     }
- body {
+body {
     height: 100dv;
 	background-image: url('backgroundzoenew.jpeg');
     background repeat: no-repeat;
@@ -45,6 +46,7 @@
     background-position: center-center;   
 	}
 	}
+
 h1 { 
 	color: purple;
 	text-align: center;
@@ -60,43 +62,51 @@ h2 {
 	left: 45%;
   }
 button {
-    
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px 60px;
     font-size: 20px; 
  }
- #myButton1 {
+ 
+#myButton1 {
+    border-radius: 2px;
     position: absolute;
 	margin-top: 450px;
 	left: 40%;
-  background-color: orange;
+    background-color: orange;
+	filter: brightness(103%);	
  }
- 
- #myButton1.centering {
+#myButton1.centering {
+  border-radius: 8px;
   transform: translateX(-2vw);
+  filter: brightness(106%);
+ 
+ }
+#myButton1.colorBrightness {
+  filter: brightness(94%);
  }
  
- #myButton2 {
+#myButton2 {
+    border-radius: 18px;
     position: absolute;
 	margin-top: 360px;
 	left: 10%;
-  background-color: lime;
+    background-color: lime;
  }
 
-.image-overlay {
-    .overlay-content{
-    background-color: none;
+.flowerBouquet {
+    .mainImage {
+     background-color: white;
     }
 	}
-.image-overlay.active {
-   .overlay-content{
-   background-color: none;
+.flowerBouquet.active {
+    .mainImage{
+     background-color: none;
 	}
 	}
-.overlay-content {
-    position: absolute;
+.mainImage {
+	position: absolute;
 	margin-top: 250px;
 	left: 45%;
     max-width: 10%;
@@ -106,37 +116,17 @@ button {
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+	border-radius: 80%;
+    }
+.mainImage img {   <!-- took me too long to figure out that the image tag ensures the scaling of the image -->
+	max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+	border-radius: 20%;
     }
 	
- @media (max-width: 768px) { 
- 
- .image-overlay {
-   width: 180px;
-   height: 100px;
-    .overlay-content{
-    background-color: none;
-    }
-	}
- .image-overlay.active {
-   width: 180px;
-   height: 100px;
-   .overlay-content{
-   width: 180px;
-   height: 100px
-   background-color: none;
-	}
-	}
- .overlay-content { 
-    position: absolute;
-    margin-top: 200px;
-	left: 36%;
-    background-color: white;
-	align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 90px
-    font-size: 60px;
-	}
+@media (max-width: 768px) {    <!-- code for phone version below -->
  button { 
     margin-top: 80%;
 	left: 15%;
@@ -152,78 +142,125 @@ button {
 	margin-top: 350px;
 	left: 29%;
     background-color: orange;
+	color: brightness(103%);
     }
- #myButton1.centering {
-  transform: translateX(-15vw);
+ #myButton1.centering2 {
+    transform: translateX(-15vw);
+    filter: brightness(106%);
+    border-radius: 8px;
   }
+ #myButton1.colorBrightness {
+    transform: translateX(-11vw);
+    filter: brightness(94%);
+ }
+ 
  #myButton2 {
     position: absolute;
 	margin-top: 140px;
 	left: 28.5%;
     background-color: lime;
     }
+	
+ .flowerBouquet {
+   width: 180px;
+   height: 100px;
+    .mainImage {
+     background-color: white;
+    }
 	}
-
-.overlay-content img {   <!-- took me too long to figure out that the image tag ensures the scaling of the image -->
-    max-width: 220px;
-    max-height: 100px;
+ .flowerBouquet.active {
+   width: 180px;
+   height: 100px;
+    .mainImage {
+     background-color: none;
+	}
+	}
+ .mainImage { 
+    position: absolute;
+    margin-top: 205px;
+	left: 36%;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px
+    font-size: 60px;
+	} 
+ .mainImage img {   <!-- took me too long to figure out that the image tag ensures the scaling of the image -->
+    max-width: 110px;
+    max-height: 110px;
     display: block;
     margin: 0 auto;
     }
-
+	}
 </style>
-<!-- HTML -->
 </head>
-
-<style>
-
-</style>
-
+<!-- HTML -->
 <body> 
-<audio id="myAudio">
+
+<audio id="bdaySong">
     <source src="birthdaysong1.mp3" type="audio/mpeg">
 </audio>
 
-<audio id="backgroundmusic">
+<audio id="backgroundMusic">
     <source src="flowers_cyrus.mp3" type="audio/mpeg">
 </audio>
 
+<div id="cartoonBouquet" class="flowerBouquet">
+    <div class="mainImage">
+    <img src="bouquet.jpg">
+    <p style="color: none; margin-top: 10px;"></p>	
+</div>
+
 <button id="myButton1">Klick mich!</button>
+
  <!--<div id="bouquet" class="image-overlay">
         <div class="overlay-content">
         <button class="overlay-close-btn">&times;</button> <img src="bouquet.avif" </div>
     </div> -->
+	
 <button id="myButton2">DIY Flowers!</button>
-<div id="imageOverlay" class="image-overlay">
-    <div class="overlay-content">
-    <img src="bouquet.jpg">
-    <p style="color: white; margin-top: 10px;"></p>	
-</div>
-
 
 <script>
-    const myAudio = document.getElementById('myAudio');
-	const backgroundmusic = document.getElementById('backgroundmusic');
-    const imageOverlay = document.getElementById('imageOverlay');
-    const newPageOverlay = document.getElementById('newPageOverlay');
+    let musicplayer = 1;
+	let btn1color = 0;
+	let btn1brightness = 0;
+	const bdaySong = document.getElementById('bdaySong');
+	const backgroundMusic = document.getElementById('backgroundMusic');
+    const cartoonBouquet = document.getElementById('cartoonBouquet');
+    // const newPageOverlay = document.getElementById('newPageOverlay');
 myButton1.addEventListener('click', function(){ 
-    
+    btn1color = 1;
+	btn1brightness = btn1brightness + 1;
 	myButton1.innerText = "HAPPY 17th BIRTHDAY 🥳";
-	myAudio.currentTime = 0;
-	myAudio.volume = 1.0;
-    myAudio.play();
-	backgroundmusic.pause();
-	imageOverlay.classList.toggle('active');
+	backgroundMusic.pause();
+	if (musicplayer == 0){
+	bdaySong.currentTime = 0;
+    bdaySong.pause();
+	musicplayer = 1;
+	}
+	else {
+	bdaySong.volume = 1.0;
+	bdaySong.play();
+	musicplayer = 0;
+	}
+	cartoonBouquet.classList.toggle('active');
+	if (btn1color == 1){
 	this.classList.toggle('centering'); 
-	newPageOverlay.classList.remove('active');
+	this.classList.toggle('centering2');
+	}
+	if (btn1brightness > 1){
+	this.classList.toggle('colorBrightness');
+	}
 	
-
+	// newPageOverlay.classList.remove('active');
+	
     });
+	
 myButton2.addEventListener('click', function(){ 
     window.open("flowermaker.html");
-    <!-- backgroundmusic.volume = 0.4; -->
-    <!-- backgroundmusic.play(); -->
-	myAudio.pause();
+    /* backgroundMusic.volume = 0.4;
+    backgroundMusic.play(); */
+	bdaySong.pause();
 
 });
 </script>
