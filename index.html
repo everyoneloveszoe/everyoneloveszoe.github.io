@@ -194,7 +194,7 @@ h2 {
 	min-height: 52px;
 	border-radius: 20px;
 	margin-top: 138px;
-	left: 20.6%;
+	left: 20.8%;
     background-color: lime;
 	font-size: 17px;  
     }
@@ -216,7 +216,7 @@ h2 {
  .mainImage { 
     position: absolute;
     margin-top: 220px;
-	left: 36%;
+	left: 35.8%;
 	align-items: center;
     justify-content: center;
     text-align: center;
@@ -274,11 +274,13 @@ myButton1.addEventListener('click', function(){
 	if (musicplayer == 0){
 	bdaySong.currentTime = 0;
     bdaySong.pause();
+	myButton1.innerText = "HAPPY 17th BIRTHDAY 🥳";
 	musicplayer = 1;
 	}
 	else {
 	bdaySong.volume = 1.0;
 	bdaySong.play();
+	myButton1.innerText = "HAPPY 17th BIRTHDAY 🥳💃";
 	musicplayer = 0;
 	}
 	cartoonBouquet.classList.toggle('active');
@@ -304,5 +306,3 @@ myButton2.addEventListener('click', function(){
 </script>
 </body>
 </html>
-
-
