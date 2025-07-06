@@ -125,6 +125,12 @@ button {
 	height: 80px;
   }
 
+.anzeige.selected {
+    background-color: rgb(255, 230, 250, 0.6);
+	text-shadow: 2.5px 2.5px 2px #C1C1C1;
+	opacity: 1.0;
+  }
+
 #changePaper {
     font-family: 'Georgia', 'Times New Roman', serif;
 	font-style: italic;
@@ -326,7 +332,13 @@ button {
 	width: 82px;
 	height: 50px;
   }
- 
+  
+.anzeige.selected {
+    background-color: rgb(255, 230, 250, 0.6);
+	text-shadow: 1.5px 1.5px 2px #C1C1C1;
+	opacity: 1.0;
+  }
+  
  #changePaper {
     font-family: 'Georgia', 'Times New Roman', serif;
 	font-style: italic;
@@ -556,6 +568,7 @@ let anzeigestatus = 0;
 const song1 = document.getElementById('song1');
 const song2 = document.getElementById('song2');
 const hibiscus1 = document.getElementById('hibiscus1');
+const Highlight = document.querySelectorAll('.anzeige');  //the dot in front of anzeige is very important not to forget
 
 soundBtn.addEventListener('click', function(){ 
 song1.addEventListener('ended', function(){
@@ -612,6 +625,12 @@ dahlia1.classList.toggle('angezeigt');
 
 });
 
+Highlight.forEach(button => {
+  button.addEventListener('click', function(){
+   this.classList.toggle('selected');
+  });
+});
+  
 changePaper.addEventListener('click', function(){
    if (anzeigestatus == 0){
    changePaper.innerText = "bouquet\ndesign 2";
