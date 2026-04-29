@@ -8,17 +8,41 @@
 <link rel="apple-touch-icon" href="apple_favicon.png">
 <h1> Facharbeitshilfe </h1>
 
-  <title>Kapitälchen selbst programmiert mit small-caps</title>
-  <style>
-    h1 {
-	font-variant: small-caps;
-	font-size: 11pt;
-	}
-  </style>
+<body bgcolor="">
+<h2> Schriftart-Umwandler </h2>
+<p>Hier ist ein Umwandler von Arial in Kapitälchen</p>
+<p> Dein Facharbeits-Retter </p>
+
+
+<style>
+
+   #eingabe {
+   font-size: 40px;
+   font-family: Arial:
+   padding: 8px;
+   }
+   #ausgabe {
+   font-size: 40px;
+   font-variant: small-caps;
+   padding: 8px;
+   background-color: #999999;
+   }
+
+
+</style>
 </head>
-<body>
-   <h1>Baumann, L. und Dirks, S.</h1>
-   <p>Normal</p>
+</body>
+   <textarea id="eingabe" oninput="umwandeln()" ></textarea>
+   <textarea id="ausgabe"></textarea>
+
+
+<script>
+   function umwandeln() {
+	eingabe=document.getElementById("eingabe").value;
+	document.getElementById("ausgabe").value = eingabe;  
+   }
+
+</script>
 </body>
 </html>
   
